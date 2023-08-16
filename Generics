@@ -1,0 +1,19 @@
+class MyContainer[A](value: A) {
+  def getValue: A = value
+}
+
+val intContainer = new MyContainer[Int](42)
+val strContainer = new MyContainer[String]("Hello, Scala!")
+
+println(intContainer.getValue) // Output: 42
+println(strContainer.getValue) // Output: Hello, Scala!
+
+
+def printValue[A](value: A): Unit = {
+  println(value)
+}
+
+printValue(42)           // Output: 42
+printValue("Hello!")     // Output: Hello!
+printValue(3.14)         // Output: 3.14
+
